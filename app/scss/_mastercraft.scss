@@ -1,0 +1,79 @@
+.mastercraft {
+    text-align: center;
+    margin-top: -9rem;
+    position: relative;
+
+    @include breakpoint-up(large) {
+        margin-top: -6rem;
+    }
+
+    &__img {
+        position: absolute;
+        top: -10%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include breakpoint-up(large) {
+            top: -11%;
+        }
+
+        img {
+            width: 100%;
+
+            @include breakpoint-up(large) {
+                width: 95%;
+            }
+        }
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 0;
+
+        @include breakpoint-up(large) {
+            font-size: 26.5px;
+        }
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.75;
+
+        @include breakpoint-up(large) {
+            font-size: 15px;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        margin-top: 1.5rem;
+        align-items: center;
+        justify-content: space-between;
+
+        @include breakpoint-up(large) {
+            margin-top: 2.25rem;
+        }
+
+        .btn {
+            padding: 18px 38px;
+            border-radius: 30px;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            font-weight: 700;
+            font-family: 'Commissioner', sans-serif;
+
+            &:first-child {
+                color: white;
+                background: $moderatecyan;
+            }
+
+            &:last-child {
+                display: none;
+
+                @include breakpoint-up(large) {
+                    display: block;
+                }
+            }
+        }
+    }
+}

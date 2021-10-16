@@ -1,7 +1,17 @@
 .header {
     z-index: 1;
     width: 100%;
-    position: absolute;
+    height: 24rem;
+    background: linear-gradient(to bottom, #00000075, transparent, transparent),
+        url("../images/image-hero-mobile.jpg") no-repeat;
+    background-size: 100%;
+
+    @include breakpoint-up(large) {
+        background: linear-gradient(to bottom, #00000075, transparent, transparent),
+            url("../images/image-hero-desktop.jpg") no-repeat;
+        background-size: 100%;
+
+    }
 
     &.open {
         .header__toggle {
@@ -73,6 +83,11 @@
         border-radius: 0.5rem;
         width: calc(100% - 3rem);
         transform: translateX(-50%);
+        display: block;
+
+        @include breakpoint-up(large) {
+            display: none;
+        }
 
         a {
             color: $black;

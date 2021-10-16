@@ -12,6 +12,7 @@ html {
 body {
     margin: 0;
     padding: 0;
+    background-color: #FAFAFA;
     font-family: 'Commissioner', sans-serif;
     height: 150vh;
 
@@ -22,6 +23,30 @@ body {
 
 a {
     text-decoration: none;
+}
+
+p {
+    color: $darkgray;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 87%;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    padding: 2.2rem 1.6rem;
+
+    @include breakpoint-up(large){
+        max-width: 42.75rem;
+        padding: 1.85rem 2.8rem;
+    }
 }
 
 .hide-for-mobile {

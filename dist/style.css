@@ -55,6 +55,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background-color: #FAFAFA;
   font-family: 'Commissioner', sans-serif;
   height: 150vh;
 }
@@ -65,6 +66,32 @@ body.noscroll {
 
 a {
   text-decoration: none;
+}
+
+p {
+  color: #7a7a7a;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 87%;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  padding: 2.2rem 1.6rem;
+}
+
+@media (min-width: 64em) {
+  .container {
+    max-width: 42.75rem;
+    padding: 1.85rem 2.8rem;
+  }
 }
 
 @media (max-width: 63.9375em) {
@@ -82,7 +109,16 @@ a {
 .header {
   z-index: 1;
   width: 100%;
-  position: absolute;
+  height: 24rem;
+  background: linear-gradient(to bottom, #00000075, transparent, transparent), url("../images/image-hero-mobile.jpg") no-repeat;
+  background-size: 100%;
+}
+
+@media (min-width: 64em) {
+  .header {
+    background: linear-gradient(to bottom, #00000075, transparent, transparent), url("../images/image-hero-desktop.jpg") no-repeat;
+    background-size: 100%;
+  }
 }
 
 .header.open .header__toggle > span:first-child {
@@ -151,6 +187,13 @@ a {
   border-radius: 0.5rem;
   width: calc(100% - 3rem);
   transform: translateX(-50%);
+  display: block;
+}
+
+@media (min-width: 64em) {
+  .header__menu {
+    display: none;
+  }
 }
 
 .header__menu a {
@@ -174,16 +217,97 @@ a {
   margin-right: 32px;
 }
 
-.hero {
-  height: 24rem;
-  background: linear-gradient(to bottom, #00000075, transparent, transparent), url("../images/image-hero-mobile.jpg") no-repeat;
-  background-size: 100%;
+.mastercraft {
+  text-align: center;
+  margin-top: -9rem;
+  position: relative;
 }
 
 @media (min-width: 64em) {
-  .hero {
-    background: linear-gradient(to bottom, #00000075, transparent, transparent), url("../images/image-hero-desktop.jpg") no-repeat;
-    background-size: 100%;
+  .mastercraft {
+    margin-top: -6rem;
+  }
+}
+
+.mastercraft__img {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 64em) {
+  .mastercraft__img {
+    top: -11%;
+  }
+}
+
+.mastercraft__img img {
+  width: 100%;
+}
+
+@media (min-width: 64em) {
+  .mastercraft__img img {
+    width: 95%;
+  }
+}
+
+.mastercraft h1 {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+@media (min-width: 64em) {
+  .mastercraft h1 {
+    font-size: 26.5px;
+  }
+}
+
+.mastercraft p {
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+@media (min-width: 64em) {
+  .mastercraft p {
+    font-size: 15px;
+  }
+}
+
+.mastercraft__btns {
+  display: flex;
+  margin-top: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 64em) {
+  .mastercraft__btns {
+    margin-top: 2.25rem;
+  }
+}
+
+.mastercraft__btns .btn {
+  padding: 18px 38px;
+  border-radius: 30px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  font-family: 'Commissioner', sans-serif;
+}
+
+.mastercraft__btns .btn:first-child {
+  color: white;
+  background: #3cb4ac;
+}
+
+.mastercraft__btns .btn:last-child {
+  display: none;
+}
+
+@media (min-width: 64em) {
+  .mastercraft__btns .btn:last-child {
+    display: block;
   }
 }
 /*# sourceMappingURL=style.css.map */
