@@ -570,7 +570,7 @@ p {
 
 @media (min-width: 64em) {
   .about__services .service__status h1 span {
-    font-size: 0.825rem;
+    font-size: 0.875rem;
     margin-left: 0.5rem;
   }
 }
@@ -592,6 +592,35 @@ p {
     margin: 0;
     font-size: 12.5px;
     padding: 0.9375rem 1.875rem;
+  }
+}
+
+.about__services .service__card.out_of_stock {
+  box-shadow: 0px 0 2px #CBCBCB;
+}
+
+.about__services .service__card.out_of_stock .service__intro h4,
+.about__services .service__card.out_of_stock .service__status h1 {
+  color: #7a7a7a;
+}
+
+.about__services .service__card.out_of_stock .service__desc,
+.about__services .service__card.out_of_stock .service__status h1 span {
+  color: #CBCBCB;
+}
+
+.about__services .service__card.out_of_stock .service__intro p {
+  color: #B5D4CE;
+}
+
+.about__services .service__card.out_of_stock .btn {
+  background: #CBCBCB;
+  padding: 1.0625rem 2.5rem;
+}
+
+@media (min-width: 64em) {
+  .about__services .service__card.out_of_stock .btn {
+    padding: 0.9375rem 2.15rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
