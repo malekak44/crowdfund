@@ -37,12 +37,13 @@ p {
 
 .container {
     max-width: 87%;
-    border-radius: 8px;
     margin-left: auto;
     margin-right: auto;
     background: white;
+    border-radius: 0.5rem;
     padding: 2.2rem 1.6rem;
-
+    box-shadow: 0px 0 1px #666565;
+    
     @include breakpoint-up(large){
         max-width: 42.75rem;
         padding: 1.85rem 2.8rem;

@@ -1,7 +1,7 @@
 .mastercraft {
     text-align: center;
-    margin-top: -9rem;
     position: relative;
+    margin-top: -7.75rem;
 
     @include breakpoint-up(large) {
         margin-top: -6rem;
@@ -27,53 +27,69 @@
     }
 
     h1 {
-        font-size: 20px;
-        margin-bottom: 0;
+        font-size: 1.375rem;
+        margin-bottom: 1.125rem;
 
         @include breakpoint-up(large) {
+            margin-bottom: 0;
             font-size: 26.5px;
         }
     }
 
     p {
-        font-size: 14px;
         line-height: 1.75;
+        font-size: 0.9375rem;
 
         @include breakpoint-up(large) {
-            font-size: 15px;
+            margin-top: 0.75rem;
         }
     }
 
     &__btns {
         display: flex;
-        margin-top: 1.5rem;
+        margin-top: 1.45rem;
         align-items: center;
         justify-content: space-between;
 
         @include breakpoint-up(large) {
-            margin-top: 2.25rem;
+            margin-top: 2.1rem;
         }
 
         .btn {
-            padding: 18px 38px;
-            border-radius: 30px;
-            font-size: 14px;
-            letter-spacing: 0.5px;
             font-weight: 700;
+            letter-spacing: 0.5px;
+            border-radius: 1.875rem;
             font-family: 'Commissioner', sans-serif;
 
             &:first-child {
                 color: white;
+                font-size: 1rem;
+                padding: 1.25rem 3rem;
                 background: $moderatecyan;
-            }
-
-            &:last-child {
-                display: none;
 
                 @include breakpoint-up(large) {
-                    display: block;
+                    font-size: 0.875rem;
+                    padding: 1.125rem 2.375rem;
                 }
             }
+
+            &:nth-child(2) {
+                color: #757575;
+                font-size: 14.25px;
+                position: relative;
+                padding: 1.125rem 1.5rem 1.125rem 4.5rem;
+
+                &::before {
+                    content: url('../images/icon-bookmark.svg');
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+
+        img {
+            width: 3.75rem;
         }
     }
 }
