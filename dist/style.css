@@ -57,7 +57,6 @@ body {
   padding: 0;
   background-color: #FAFAFA;
   font-family: 'Commissioner', sans-serif;
-  height: 150vh;
 }
 
 body.noscroll {
@@ -427,6 +426,16 @@ p {
   appearance: none;
 }
 
+.about {
+  margin-bottom: 5.125rem;
+}
+
+@media (min-width: 64em) {
+  .about {
+    margin-bottom: 7.375rem;
+  }
+}
+
 .about__header h3 {
   margin: 0.375rem 0 0;
 }
@@ -455,6 +464,134 @@ p {
 @media (min-width: 64em) {
   .about__header__text {
     margin: 1.75rem 0;
+  }
+}
+
+.about__services {
+  margin: 2.5rem auto 0;
+}
+
+.about__services .service__card {
+  margin-bottom: 1.75rem;
+  border-radius: 0.375rem;
+  padding: 0.375rem 1.625rem;
+  box-shadow: 0px 0 1.5px #414040;
+}
+
+.about__services .service__card:last-child {
+  margin-bottom: 0.875rem;
+}
+
+@media (min-width: 64em) {
+  .about__services .service__card {
+    margin: 0 auto 1.5rem;
+    padding: 1rem 1.875rem;
+  }
+}
+
+.about__services .service__intro, .about__services .service__status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@media (min-width: 64em) {
+  .about__services .service__intro, .about__services .service__status {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.about__services .service__intro {
+  margin: 1rem 0 0;
+}
+
+.about__services .service__intro h4 {
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+@media (min-width: 64em) {
+  .about__services .service__intro h4 {
+    font-size: 1.0625rem;
+  }
+}
+
+.about__services .service__intro p {
+  margin: 0.5rem 0 0;
+  color: #3cb4ac;
+  font-size: 0.9375rem;
+}
+
+@media (min-width: 64em) {
+  .about__services .service__intro p {
+    margin: 0;
+    font-size: 0.875rem;
+  }
+}
+
+.about__services .service__desc {
+  line-height: 1.75;
+  margin: 1.625rem 0;
+  font-size: 0.9375rem;
+}
+
+@media (min-width: 64em) {
+  .about__services .service__desc {
+    line-height: 2;
+    margin: 1.25rem 0;
+  }
+}
+
+.about__services .service__status {
+  margin: 0 auto 0.75rem;
+}
+
+.about__services .service__status h1 {
+  margin: 0;
+  display: flex;
+  font-size: 2.125rem;
+  align-items: center;
+}
+
+@media (min-width: 64em) {
+  .about__services .service__status h1 {
+    font-size: 1.875rem;
+  }
+}
+
+.about__services .service__status h1 span {
+  font-size: 1rem;
+  color: #7a7a7a;
+  font-weight: 100;
+  margin-left: 0.625rem;
+}
+
+@media (min-width: 64em) {
+  .about__services .service__status h1 span {
+    font-size: 0.825rem;
+    margin-left: 0.5rem;
+  }
+}
+
+.about__services .service__status .btn {
+  color: white;
+  font-weight: 700;
+  font-size: 0.875rem;
+  border-radius: 2rem;
+  letter-spacing: 0.5px;
+  background: #3cb4ac;
+  margin: 1.625rem 0 0.375rem;
+  padding: 1.0625rem 2.1875rem;
+  font-family: 'Commissioner', sans-serif;
+}
+
+@media (min-width: 64em) {
+  .about__services .service__status .btn {
+    margin: 0;
+    font-size: 12.5px;
+    padding: 0.9375rem 1.875rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
