@@ -75,6 +75,7 @@ p {
   border: none;
   outline: none;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .container {
@@ -211,10 +212,15 @@ p {
 .header__links a {
   color: white;
   font-size: 12.5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.header__links a:hover {
+  text-decoration: underline;
 }
 
 .header__links a:not(:last-child) {
-  margin-right: 32px;
+  margin-right: 2rem;
 }
 
 .mastercraft {
@@ -304,6 +310,10 @@ p {
   background: #3cb4ac;
 }
 
+.mastercraft__btns .btn:first-child:hover {
+  background: #147b74;
+}
+
 @media (min-width: 64em) {
   .mastercraft__btns .btn:first-child {
     font-size: 0.875rem;
@@ -311,22 +321,35 @@ p {
   }
 }
 
-.mastercraft__btns .btn:nth-child(2) {
+.mastercraft__btns .btn:last-child {
   color: #757575;
   font-size: 14.25px;
   position: relative;
-  padding: 1.125rem 1.5rem 1.125rem 4.5rem;
+  padding: 1.8125rem;
 }
 
-.mastercraft__btns .btn:nth-child(2)::before {
-  content: url("../images/icon-bookmark.svg");
+@media (min-width: 64em) {
+  .mastercraft__btns .btn:last-child {
+    padding: 1.125rem 0.75rem 1.125rem 2.125rem;
+  }
+}
+
+.mastercraft__btns .btn:last-child img {
+  width: 3.75rem;
   position: absolute;
   top: 0;
   left: 0;
+  transition: all 0.3s ease-in-out;
 }
 
-.mastercraft__btns img {
-  width: 3.75rem;
+@media (min-width: 64em) {
+  .mastercraft__btns .btn:last-child img {
+    width: 3.25rem;
+  }
+}
+
+.mastercraft__btns .btn:last-child:hover img {
+  filter: opacity(0.75);
 }
 
 .pricing {
@@ -587,6 +610,10 @@ p {
   font-family: 'Commissioner', sans-serif;
 }
 
+.about__services .service__status .btn:hover {
+  background: #147b74;
+}
+
 @media (min-width: 64em) {
   .about__services .service__status .btn {
     margin: 0;
@@ -616,6 +643,11 @@ p {
 .about__services .service__card.out_of_stock .btn {
   background: #CBCBCB;
   padding: 1.0625rem 2.5rem;
+}
+
+.about__services .service__card.out_of_stock .btn:hover {
+  background: #CBCBCB;
+  cursor: not-allowed;
 }
 
 @media (min-width: 64em) {
