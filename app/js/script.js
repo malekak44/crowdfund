@@ -46,11 +46,11 @@ link.forEach(a => a.addEventListener("click", (e) => {
 bookmarkBtn.addEventListener("click", (e) => {
     if (bookmarkBtn.classList.contains('bookmarked')) {
         bookmarkBtn.classList.remove('bookmarked');
-        bookmarkImg.src = '../images/icon-bookmark.svg';
+        bookmarkImg.src = 'images/icon-bookmark.svg';
         bookmarkText.innerText = 'Bookmark';
     } else {
         bookmarkBtn.classList.add('bookmarked');
-        bookmarkImg.src = '../images/icon-bookmarked.svg';
+        bookmarkImg.src = 'images/icon-bookmarked.svg';
         bookmarkText.innerText = 'Bookmarked';
     }
 });
