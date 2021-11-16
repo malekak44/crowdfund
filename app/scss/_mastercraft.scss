@@ -80,7 +80,6 @@
             }
 
             &:last-child {
-                color: #757575;
                 font-size: 14.25px;
                 position: relative;
                 padding: 1.8125rem;
@@ -105,6 +104,18 @@
                     img {
                         filter: opacity(0.75);
                     }
+                }
+            }
+
+            #bookmark-text {
+                color: #757575;
+            }
+
+            &.bookmarked {
+                background: #F4F8F9;
+
+                #bookmark-text {
+                    color: $darkcyan;
                 }
             }
         }

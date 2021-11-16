@@ -1,3 +1,45 @@
 .success-modal {
-    display: none;
+    width: 32rem;
+    position: absolute;
+    top: 27rem;
+    left: 50%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.625rem 3.25rem;
+    transform: translateX(-50%);
+
+    img {
+        width: 5.375rem;
+    }
+
+    h1 {
+        margin: 2.625rem 0 0;
+        font-size: 1.4375rem;
+    }
+
+    p {
+        line-height: 2;
+        text-align: center;
+        font-size: 0.9375rem;
+    }
+
+    .btn {
+        color: white;
+        font-weight: 500;
+        border-radius: 2rem;
+        font-size: 0.875rem;
+        font-family: inherit;
+        padding: 0.875rem 2rem;
+        background: $moderatecyan;
+        margin: 0.625rem 0 0.3125rem;
+
+        &:hover {
+            background: $darkcyan;
+        }
+    }
 }

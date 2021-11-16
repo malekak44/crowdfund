@@ -328,7 +328,6 @@ p {
 }
 
 .mastercraft__btns .btn:last-child {
-  color: #757575;
   font-size: 14.25px;
   position: relative;
   padding: 1.8125rem;
@@ -356,6 +355,18 @@ p {
 
 .mastercraft__btns .btn:last-child:hover img {
   filter: opacity(0.75);
+}
+
+.mastercraft__btns .btn #bookmark-text {
+  color: #757575;
+}
+
+.mastercraft__btns .btn.bookmarked {
+  background: #F4F8F9;
+}
+
+.mastercraft__btns .btn.bookmarked #bookmark-text {
+  color: #147b74;
 }
 
 .pricing {
@@ -700,12 +711,22 @@ p {
 }
 
 .modal__services .service__card {
-  display: grid;
   margin-bottom: 1.5rem;
   border-radius: 0.375rem;
-  grid-template-columns: 0.085fr 1fr;
-  padding: 1.75rem 1.375rem 0.75rem;
   box-shadow: 0px 0 1.5px #414040;
+}
+
+.modal__services .service__card.selected {
+  box-shadow: none;
+  border: 2px solid #3cb4ac;
+}
+
+.modal__services .service__card.selected .service__intro__title p {
+  font-weight: 700;
+}
+
+.modal__services .service__card.selected .service__form {
+  display: grid;
 }
 
 .modal__services .service__card:first-child .service__radio__wrapper {
@@ -716,8 +737,10 @@ p {
   margin-bottom: 1.125rem;
 }
 
-.modal__services .service__info {
-  cursor: pointer;
+.modal__services .service__wrapper {
+  display: grid;
+  padding: 1.75rem 1.45rem 0.8rem;
+  grid-template-columns: 0.085fr 1fr;
 }
 
 .modal__services .service__intro, .modal__services .service__intro__title {
@@ -728,7 +751,13 @@ p {
 
 .modal__services .service__intro__title h4 {
   margin: 0;
+  cursor: pointer;
   font-size: 0.9375rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.modal__services .service__intro__title h4:hover {
+  color: #3cb4ac;
 }
 
 .modal__services .service__intro__title p {
@@ -747,7 +776,7 @@ p {
   color: #7a7a7a;
   font-weight: 100;
   margin-left: 0.5rem;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
 }
 
 .modal__services .service__radio {
@@ -763,12 +792,12 @@ p {
 }
 
 .modal__services .service__radio__wrapper {
-  width: 22px;
-  height: 22px;
   display: flex;
   cursor: pointer;
-  margin-top: 4px;
+  width: 1.375rem;
+  height: 1.375rem;
   position: relative;
+  margin-top: 0.25rem;
   align-items: center;
   -webkit-box-align: center;
 }
@@ -807,6 +836,58 @@ p {
   transition: width 0.2s ease-out 0s, height 0.2s ease-out 0s;
 }
 
+.modal__services .service__form {
+  display: none;
+  padding: 1.25rem 1.375rem;
+  border-top: 1.5px solid #ddd;
+  grid-template-columns: 3.2fr 1fr 1fr;
+}
+
+.modal__services .service__form input {
+  outline: none;
+  font-size: 0.875rem;
+  font-family: inherit;
+  color: #3cb4ac;
+}
+
+.modal__services .service__form input[type=text] {
+  border: none;
+}
+
+.modal__services .service__form input[type=number] {
+  width: 94px;
+  font-weight: 700;
+  border: 1px solid #3cb4ac;
+  background: url("../images/dollar.svg");
+  background-size: 0.875rem;
+  background-repeat: no-repeat;
+  background-position: 0.875rem 0.9375rem;
+  padding: 0.8125rem 0.9375rem 0.8125rem 2rem;
+}
+
+.modal__services .service__form input[type=number]::placeholder {
+  color: #222;
+}
+
+.modal__services .service__form input[type=number],
+.modal__services .service__form .btn {
+  border-radius: 2rem;
+  font-family: inherit;
+  letter-spacing: 0.5px;
+}
+
+.modal__services .service__form .btn {
+  color: white;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 0.875rem 0;
+  background: #3cb4ac;
+}
+
+.modal__services .service__form .btn:hover {
+  background: #147b74;
+}
+
 .modal__services .service__card.out_of_stock {
   box-shadow: 0px 0 2px #CBCBCB;
 }
@@ -826,6 +907,48 @@ p {
 }
 
 .success-modal {
-  display: none;
+  width: 32rem;
+  position: absolute;
+  top: 27rem;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.625rem 3.25rem;
+  transform: translateX(-50%);
+}
+
+.success-modal img {
+  width: 5.375rem;
+}
+
+.success-modal h1 {
+  margin: 2.625rem 0 0;
+  font-size: 1.4375rem;
+}
+
+.success-modal p {
+  line-height: 2;
+  text-align: center;
+  font-size: 0.9375rem;
+}
+
+.success-modal .btn {
+  color: white;
+  font-weight: 500;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-family: inherit;
+  padding: 0.875rem 2rem;
+  background: #3cb4ac;
+  margin: 0.625rem 0 0.3125rem;
+}
+
+.success-modal .btn:hover {
+  background: #147b74;
 }
 /*# sourceMappingURL=style.css.map */

@@ -44,9 +44,9 @@
     <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.
       <div class="mastercraft__btns">
         <button class="btn" id="open-modal">Back this project</button>
-        <button class="btn">
-          <img src="images/icon-bookmark.svg" alt="bookmark">
-          <span class="btn hide-for-mobile">Bookmark</span>
+        <button class="btn" id="bookmark-btn">
+          <img id="bookmark-img" src="images/icon-bookmark.svg" alt="bookmark">
+          <span id="bookmark-text" class="btn hide-for-mobile">Bookmark</span>
         </button>
       </div>
     </p>
@@ -133,107 +133,120 @@
     </div>
     <article class="modal__services">
       <div class="service__card">
-        <div class="service__radio__wrapper">
-          <input type="radio" name="service" id="no-reward" class="service__radio">
-          <div class="service__radio__checked"></div>
-        </div>
-        <label for="no-reward" class="service__info">
-          <div class="service__intro">
-            <div class="service__intro__title">
-              <h4>Pledge with no reward</h4>
-            </div>
+        <div class="service__wrapper">
+          <div class="service__radio__wrapper">
+            <input type="radio" name="service" id="no-reward" class="service__radio">
+            <div class="service__radio__checked"></div>
           </div>
-          <p class="service__desc">Choose to support us without a reward if you simply believe in our project. As a
-            backer,
-            you will be signed up to receive product updates via email.</p>
-        </label>
+          <div class="service__info">
+            <div class="service__intro">
+              <div class="service__intro__title">
+                <label for="no-reward">
+                  <h4>Pledge with no reward</h4>
+                </label>
+              </div>
+            </div>
+            <p class="service__desc">Choose to support us without a reward if you simply believe in our project. As a
+              backer,
+              you will be signed up to receive product updates via email.</p>
+          </div>
+        </div>
+        <form class="service__form">
+          <input type="text" placeholder="Enter your pledge" autocomplete="off">
+          <input type="number" placeholder="0">
+          <button type="submit" class="btn">Continue</button>
+        </form>
       </div>
       <div class="service__card">
-        <div class="service__radio__wrapper">
-          <input type="radio" name="service" id="bamboo-stand" class="service__radio">
-          <div class="service__radio__checked"></div>
-        </div>
-        <label for="bamboo-stand" class="service__info">
-          <div class="service__intro">
-            <div class="service__intro__title">
-              <h4>Bamboo Stand</h4>
-              <p>Pledge $25 or more</p>
-            </div>
-            <h4>101<span>left</span></h4>
+        <div class="service__wrapper">
+          <div class="service__radio__wrapper">
+            <input type="radio" name="service" id="bamboo-stand" class="service__radio">
+            <div class="service__radio__checked"></div>
           </div>
-          <p class="service__desc">You get an ergonomic stand made of natural bamboo. You've helped us launch our
-            promotional campaign, and
-            you’ll be added to a special Backer member list.</p>
-        </label>
+          <div class="service__info">
+            <div class="service__intro">
+              <div class="service__intro__title">
+                <label for="bamboo-stand">
+                  <h4>Bamboo Stand</h4>
+                </label>
+                <p>Pledge $25 or more</p>
+              </div>
+              <h4>101<span>left</span></h4>
+            </div>
+            <p class="service__desc">You get an ergonomic stand made of natural bamboo. You've helped us launch our
+              promotional campaign, and
+              you’ll be added to a special Backer member list.</p>
+          </div>
+        </div>
+        <form class="service__form">
+          <input type="text" placeholder="Enter your pledge" autocomplete="off">
+          <input type="number" placeholder="25" min="25">
+          <button type="submit" class="btn">Continue</button>
+        </form>
       </div>
       <div class="service__card">
-        <div class="service__radio__wrapper">
-          <input type="radio" name="service" id="black-edition" class="service__radio">
-          <div class="service__radio__checked"></div>
-        </div>
-        <label for="black-edition" class="service__info">
-          <div class="service__intro">
-            <div class="service__intro__title">
-              <h4>Black Edition Stand</h4>
-              <p>Pledge $75 or more</p>
-            </div>
-            <h4>64<span>left</span></h4>
+        <div class="service__wrapper">
+          <div class="service__radio__wrapper">
+            <input type="radio" name="service" id="black-edition" class="service__radio">
+            <div class="service__radio__checked"></div>
           </div>
-          <p class="service__desc">You get a Black Special Edition computer stand and a personal thank you. You’ll be
-            added to our Backer
-            member list. Shipping is included.</p>
-        </label>
+          <div class="service__info">
+            <div class="service__intro">
+              <div class="service__intro__title">
+                <label for="black-edition">
+                  <h4>Black Edition Stand</h4>
+                </label>
+                <p>Pledge $75 or more</p>
+              </div>
+              <h4>64<span>left</span></h4>
+            </div>
+            <p class="service__desc">You get a Black Special Edition computer stand and a personal thank you. You’ll be
+              added to our Backer
+              member list. Shipping is included.</p>
+          </div>
+        </div>
+        <form class="service__form">
+          <input type="text" placeholder="Enter your pledge" autocomplete="off">
+          <input type="number" placeholder="75" min="75">
+          <button type="submit" class="btn">Continue</button>
+        </form>
       </div>
       <div class="service__card out_of_stock">
-        <div class="service__radio__wrapper">
-          <input type="radio" name="service" id="mahogany-special" class="service__radio">
-          <div class="service__radio__checked"></div>
-        </div>
-        <label for="mahogany-special" class="service__info">
-          <div class="service__intro">
-            <div class="service__intro__title">
-              <h4>Mahogany Special Edition</h4>
-              <p>Pledge $200 or more</p>
-            </div>
-            <h4>0<span>left</span></h4>
+        <div class="service__wrapper">
+          <div class="service__radio__wrapper">
+            <input type="radio" name="service" id="mahogany-special" class="service__radio">
+            <div class="service__radio__checked"></div>
           </div>
-          <p class="service__desc">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank
-            you. You’ll be added
-            to our Backer member list. Shipping is included.</p>
-        </label>
+          <div class="service__info">
+            <div class="service__intro">
+              <div class="service__intro__title">
+                <label for="mahogany-special">
+                  <h4>Mahogany Special Edition</h4>
+                </label>
+                <p>Pledge $200 or more</p>
+              </div>
+              <h4>0<span>left</span></h4>
+            </div>
+            <p class="service__desc">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank
+              you. You’ll be added
+              to our Backer member list. Shipping is included.</p>
+          </div>
+        </div>
+        <form class="service__form">
+          <input type="text" placeholder="Enter your pledge" autocomplete="off">
+          <input type="number" placeholder="200" min="200">
+          <button type="submit" class="btn">Continue</button>
+        </form>
       </div>
     </article>
   </section>
 
-  <!-- Selected pledge start -->
-  <!--
-  Enter your pledge
-  $25
-  Continue
--->
-  <!-- Selected pledge end -->
-  <!-- Selected pledge start -->
-  <!--
-  Enter your pledge
-  $75
-  Continue
-   -->
-  <!-- Selected pledge end -->
-  <!-- Selected pledge  start -->
-  <!--
-  Enter your pledge
-  $200
-  Continue
-  -->
-  <!-- Selected pledge end -->
-
-
-  <section class="success-modal">
+  <section class="success-modal has-fade">
     <img src="images/icon-check.svg" alt="check">
     <h1>Thanks for your support!</h1>
     <p>Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
       an email once our campaign is completed.</p>
-    <button class="btn">Got it!</button>
+    <button class="btn close-success-modal">Got it!</button>
   </section>
 
   <script src="app/js/script.js"></script>
