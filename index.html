@@ -133,8 +133,11 @@
     </div>
     <article class="modal__services">
       <div class="service__card">
-        <input type="checkbox" class="service__checkbox">
-        <div class="service__info">
+        <div class="service__radio__wrapper">
+          <input type="radio" name="service" id="no-reward" class="service__radio">
+          <div class="service__radio__checked"></div>
+        </div>
+        <label for="no-reward" class="service__info">
           <div class="service__intro">
             <div class="service__intro__title">
               <h4>Pledge with no reward</h4>
@@ -143,11 +146,14 @@
           <p class="service__desc">Choose to support us without a reward if you simply believe in our project. As a
             backer,
             you will be signed up to receive product updates via email.</p>
-        </div>
+        </label>
       </div>
       <div class="service__card">
-        <input type="checkbox" class="service__checkbox">
-        <div class="service__info">
+        <div class="service__radio__wrapper">
+          <input type="radio" name="service" id="bamboo-stand" class="service__radio">
+          <div class="service__radio__checked"></div>
+        </div>
+        <label for="bamboo-stand" class="service__info">
           <div class="service__intro">
             <div class="service__intro__title">
               <h4>Bamboo Stand</h4>
@@ -158,11 +164,14 @@
           <p class="service__desc">You get an ergonomic stand made of natural bamboo. You've helped us launch our
             promotional campaign, and
             you’ll be added to a special Backer member list.</p>
-        </div>
+        </label>
       </div>
       <div class="service__card">
-        <input type="checkbox" class="service__checkbox">
-        <div class="service__info">
+        <div class="service__radio__wrapper">
+          <input type="radio" name="service" id="black-edition" class="service__radio">
+          <div class="service__radio__checked"></div>
+        </div>
+        <label for="black-edition" class="service__info">
           <div class="service__intro">
             <div class="service__intro__title">
               <h4>Black Edition Stand</h4>
@@ -173,11 +182,14 @@
           <p class="service__desc">You get a Black Special Edition computer stand and a personal thank you. You’ll be
             added to our Backer
             member list. Shipping is included.</p>
-        </div>
+        </label>
       </div>
       <div class="service__card out_of_stock">
-        <input type="checkbox" class="service__checkbox">
-        <div class="service__info">
+        <div class="service__radio__wrapper">
+          <input type="radio" name="service" id="mahogany-special" class="service__radio">
+          <div class="service__radio__checked"></div>
+        </div>
+        <label for="mahogany-special" class="service__info">
           <div class="service__intro">
             <div class="service__intro__title">
               <h4>Mahogany Special Edition</h4>
@@ -188,7 +200,7 @@
           <p class="service__desc">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank
             you. You’ll be added
             to our Backer member list. Shipping is included.</p>
-        </div>
+        </label>
       </div>
     </article>
   </section>
