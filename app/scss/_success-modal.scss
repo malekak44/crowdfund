@@ -1,7 +1,7 @@
 .success-modal {
-    width: 32rem;
+    width: 87%;
     position: absolute;
-    top: 27rem;
+    top: 9.5rem;
     left: 50%;
     z-index: 2;
     display: flex;
@@ -10,33 +10,61 @@
     border-radius: 0.5rem;
     flex-direction: column;
     justify-content: center;
-    padding: 2.625rem 3.25rem;
+    padding: 2.15rem 1.25rem;
     transform: translateX(-50%);
 
+    @include breakpoint-up(large) {
+        top: 27rem;
+        max-width: 32rem;
+        padding: 2.625rem 3.25rem;
+    }
+
     img {
-        width: 5.375rem;
+        width: 4.275rem;
+
+        @include breakpoint-up(large) {
+            width: 5.375rem;
+        }
     }
 
     h1 {
-        margin: 2.625rem 0 0;
-        font-size: 1.4375rem;
+        margin: 1.625rem 0 0;
+        font-size: 1.1875rem;
+
+        @include breakpoint-up(large) {
+            margin: 2.625rem 0 0;
+            font-size: 1.4375rem;
+        }
     }
 
     p {
-        line-height: 2;
+        line-height: 1.75;
         text-align: center;
         font-size: 0.9375rem;
+        margin-top: 1.625rem;
+
+        @include breakpoint-up(large) {
+            line-height: 2;
+            margin-top: 1em;
+        }
     }
 
     .btn {
         color: white;
         font-weight: 500;
         border-radius: 2rem;
-        font-size: 0.875rem;
+        font-size: 0.9375rem;
         font-family: inherit;
-        padding: 0.875rem 2rem;
+        padding: 1rem 2.25rem;
         background: $moderatecyan;
-        margin: 0.625rem 0 0.3125rem;
+        margin: 1.125rem 0 0.4rem;
+
+
+        @include breakpoint-up(large) {
+            font-size: 0.875rem;
+            padding: 0.875rem 2rem;
+            margin: 0.625rem 0 0.3125rem;
+        }
 
         &:hover {
             background: $darkcyan;
